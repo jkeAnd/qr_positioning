@@ -1,0 +1,65 @@
+:root { 
+    --theme: #280;/* css variable */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+h1 {
+    font-family: "Arial";
+    color:  var(--theme);
+    margin: 0;
+}
+
+#map {
+    width: 100%;
+    
+}
+
+#marker {
+    width: 3vw; /* 3% of the viewport width *//* if we use 3vw its relative (the size will thus be adjusted same number?)*/
+    height: 3vw;
+    background-color: black;
+    border-radius: 50%;
+    outline: 5px solid var(--theme);/* does not affect the size of the element*/ 
+    border: 5px solid white;/* does affect the size*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+
+}
+
+#mapContainer {
+    position: relative;
+    display: none;
+
+}
+
+#camera {
+    width: 100%;
+}
+/* TASK 2: Button style:
+            -BACKGROUND COLOR = use css variable (#280) */ 
+#btn {
+    background-color: var(--theme);
+    border: none;
+    color:white ; /* colour of the text */
+    padding: 15px 32px;
+    border-radius: 8px; /* rounded edges */
+    text-align: center;
+    text-decoration: none;
+    display:inline-block; /* type of boxes */ 
+    font-size: 16px;
+    cursor: pointer; /* cursor becomes a hand = meaning the thing can be clicked on*/ 
+
+    transition: background-color 0.3s; /* The time that it takes to transition to other colour */ 
+}
+
+#btn:hover { /*pseudo interacuve class for hovering over button and changing colour */
+    background-color: lightgreen; /* the colour that it changes to */
+    
+}
