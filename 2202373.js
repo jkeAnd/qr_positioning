@@ -1,4 +1,9 @@
 const reader = new Html5Qrcode("camera");
+/*Task 3: Connecting Javascript to html id*/
+//1st selecting elements to be modified//
+const itemName = document.getElementById("itemName");
+const itemStock = document.getElementById("itemStock");
+const itemPrice = document.getElementById("itemPrice");
 let scannerOn = false; //don't use the interface to make decisions!!
 // Based on language needs (if needed to change language may become difficult and combersome)
 
@@ -23,6 +28,16 @@ function startScanner() {
             console.log("RAW:",text); /* TASK 3: Trying to view LINE TEST (ADDING A LABEL TO HELP TEST LINE) */
             const place = JSON.parse(text);
             console.log("Parsed object",place); /* TASK #: TRYINE TO SEE PARSED DATA (ADDING A LABEL TO HELP TEST LINE) */
+            itemName.innerText = "Name: " + place.name;
+            itemPrice.innerText = "Price:" + place.price +"€";
+
+            if (place.inStock) {
+                itemStock.innerText = "Status: In stock";
+            } else 
+            {
+                itemStock.innerText = " Status: Out of stock";
+            }
+            
             showMarkerAt(place.top, place.left);
             toggleScanner();
         }   
