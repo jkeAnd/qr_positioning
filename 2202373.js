@@ -20,7 +20,9 @@ function startScanner() {
         { facingMode: "environment" }, //User = selfy environment = back camera 
         {}, // frame rate / specific things NOT NEEDED HERE
         function (text)  {
+            console.log(text); /* TASK 3: Trying to view LINE TEST */
             const place = JSON.parse(text);
+            console.log(place); /* TASK #: TRYINE TO SEE PARSED DATA */
             showMarkerAt(place.top, place.left);
             toggleScanner();
         }   
