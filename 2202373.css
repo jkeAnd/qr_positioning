@@ -64,4 +64,31 @@ h1 {
     
 }
 
+
+/*------------------------------
+Task 3: Styling a box around inventory information 
+--------------------------------*/
+
+#inventoryBox { /* Hiding the box until scanned */
+    display: none;
+}
+
+#inventoryBox {
+    border: 2px solid var(--theme); /* The visible box using the theme colour*/
+    padding: 10px; /* how much space inside*/
+    margin-top: 10px; /* space from top (button)*/
+    width: 80%; /* size*/
+    background-color: blanchedalmond; /*(Tasty sounding colour)*/
+
+}
+
+#inventoryBox h2 { /* styling the header to match theme*/
+    margin-top: 0;
+    color: var(--theme)
+}
+
+#inventoryBox p { /* styling the text*/
+    margin: 5px 0;
+
+}
 /* TEST TEST TEST - seeing how updating file will look in github */ 

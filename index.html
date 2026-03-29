@@ -12,8 +12,16 @@
         <img src="map.png" id="map" alt ="map" />
         <div id="marker"></div>
     </div>
-    <button id="btn" onclick="toggleScanner()">SCAN</button>
+    <button id="btn" onclick="toggleScanner()">SCAN</button> <!-- TASK " : HERE IS THE BUTTON -->
+    <!--TASK 3: Creating "placeholders" for values from Javascript (will be updated dynamically)-->
+    <div id="inventoryBox"> <!--creating a box for visual purposes -->
+        <h2>Inventory</h2>
+        <p id="itemName"></p> <!--p == individual item -->
+        <p id="itemStock"></p>
+        <p id="itemPrice"></p>
+    </div>
 
+    
     <div id="camera"></div>
 
     <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>

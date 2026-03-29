@@ -4,6 +4,8 @@ const reader = new Html5Qrcode("camera");
 const itemName = document.getElementById("itemName");
 const itemStock = document.getElementById("itemStock");
 const itemPrice = document.getElementById("itemPrice");
+const inventoryBox = document.getElementById("inventoryBox"); /*defining inventory box for visual*/
+
 let scannerOn = false; //don't use the interface to make decisions!!
 // Based on language needs (if needed to change language may become difficult and combersome)
 
@@ -27,8 +29,9 @@ function startScanner() {
         function (text)  {
             console.log("RAW:",text); /* TASK 3: Trying to view LINE TEST (ADDING A LABEL TO HELP TEST LINE) */
             const place = JSON.parse(text);
+            inventoryBox.style.display = "block";
             console.log("Parsed object",place); /* TASK #: TRYINE TO SEE PARSED DATA (ADDING A LABEL TO HELP TEST LINE) */
-            itemName.innerText = "Name: " + place.name;
+            itemName.innerText = "Name: " + place.name; // Updating value variable to that of the parsed date //  
             itemPrice.innerText = "Price:" + place.price +"€";
 
             if (place.inStock) {
